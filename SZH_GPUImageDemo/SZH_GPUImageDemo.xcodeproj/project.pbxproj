@@ -16,6 +16,7 @@
 		A6689D071F6A567C0024BFBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6689D051F6A567C0024BFBE /* LaunchScreen.storyboard */; };
 		A6689D121F6A567C0024BFBE /* SZH_GPUImageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689D111F6A567C0024BFBE /* SZH_GPUImageDemoTests.m */; };
 		A6689D1D1F6A567C0024BFBE /* SZH_GPUImageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689D1C1F6A567C0024BFBE /* SZH_GPUImageDemoUITests.m */; };
+		A6691AFF1F6CB8DC00992419 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6691AFE1F6CB8DC00992419 /* x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A6689D181F6A567C0024BFBE /* SZH_GPUImageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZH_GPUImageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6689D1C1F6A567C0024BFBE /* SZH_GPUImageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZH_GPUImageDemoUITests.m; sourceTree = "<group>"; };
 		A6689D1E1F6A567C0024BFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6691AFE1F6CB8DC00992419 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		A6689CF61F6A567C0024BFBE /* SZH_GPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A6691AFD1F6CB8DC00992419 /* Images */,
 				A6689CFA1F6A567C0024BFBE /* AppDelegate.h */,
 				A6689CFB1F6A567C0024BFBE /* AppDelegate.m */,
 				A6689CFD1F6A567C0024BFBE /* ViewController.h */,
@@ -162,6 +165,14 @@
 				A6689D1E1F6A567C0024BFBE /* Info.plist */,
 			);
 			path = SZH_GPUImageDemoUITests;
+			sourceTree = "<group>";
+		};
+		A6691AFD1F6CB8DC00992419 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A6691AFE1F6CB8DC00992419 /* x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6691AFF1F6CB8DC00992419 /* x.png in Resources */,
 				A6689D071F6A567C0024BFBE /* LaunchScreen.storyboard in Resources */,
 				A6689D041F6A567C0024BFBE /* Assets.xcassets in Resources */,
 				A6689D021F6A567C0024BFBE /* Main.storyboard in Resources */,
@@ -584,6 +596,7 @@
 				A6689D231F6A567C0024BFBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6689D241F6A567C0024BFBE /* Build configuration list for PBXNativeTarget "SZH_GPUImageDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +605,7 @@
 				A6689D261F6A567C0024BFBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6689D271F6A567C0024BFBE /* Build configuration list for PBXNativeTarget "SZH_GPUImageDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +614,7 @@
 				A6689D291F6A567C0024BFBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
