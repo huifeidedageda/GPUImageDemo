@@ -11,7 +11,6 @@
 		A6689CF91F6A567C0024BFBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689CF81F6A567C0024BFBE /* main.m */; };
 		A6689CFC1F6A567C0024BFBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689CFB1F6A567C0024BFBE /* AppDelegate.m */; };
 		A6689CFF1F6A567C0024BFBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689CFE1F6A567C0024BFBE /* ViewController.m */; };
-		A6689D021F6A567C0024BFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6689D001F6A567C0024BFBE /* Main.storyboard */; };
 		A6689D041F6A567C0024BFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6689D031F6A567C0024BFBE /* Assets.xcassets */; };
 		A6689D071F6A567C0024BFBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6689D051F6A567C0024BFBE /* LaunchScreen.storyboard */; };
 		A6689D121F6A567C0024BFBE /* SZH_GPUImageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689D111F6A567C0024BFBE /* SZH_GPUImageDemoTests.m */; };
@@ -46,7 +45,6 @@
 		A6689CFB1F6A567C0024BFBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6689CFD1F6A567C0024BFBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A6689CFE1F6A567C0024BFBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A6689D011F6A567C0024BFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6689D031F6A567C0024BFBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6689D061F6A567C0024BFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6689D081F6A567C0024BFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				A6689CFB1F6A567C0024BFBE /* AppDelegate.m */,
 				A6689CFD1F6A567C0024BFBE /* ViewController.h */,
 				A6689CFE1F6A567C0024BFBE /* ViewController.m */,
-				A6689D001F6A567C0024BFBE /* Main.storyboard */,
 				A6689D031F6A567C0024BFBE /* Assets.xcassets */,
 				A6689D051F6A567C0024BFBE /* LaunchScreen.storyboard */,
 				A6689D081F6A567C0024BFBE /* Info.plist */,
@@ -245,6 +242,7 @@
 				TargetAttributes = {
 					A6689CF31F6A567C0024BFBE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K9LCV5Z527;
 						ProvisioningStyle = Automatic;
 					};
 					A6689D0C1F6A567C0024BFBE = {
@@ -287,7 +285,6 @@
 				A6691AFF1F6CB8DC00992419 /* x.png in Resources */,
 				A6689D071F6A567C0024BFBE /* LaunchScreen.storyboard in Resources */,
 				A6689D041F6A567C0024BFBE /* Assets.xcassets in Resources */,
-				A6689D021F6A567C0024BFBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,14 +395,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A6689D001F6A567C0024BFBE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6689D011F6A567C0024BFBE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A6689D051F6A567C0024BFBE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -512,9 +501,11 @@
 			baseConfigurationReference = 4A1C0D69C203F1F86FF288C2 /* Pods-SZH_GPUImageDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9LCV5Z527;
 				INFOPLIST_FILE = SZH_GPUImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "BibaoBaseUsing.SZH-GPUImageDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bizhibn.cgqbiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -524,9 +515,11 @@
 			baseConfigurationReference = 802C0BF0CF8D5EE6F535D40D /* Pods-SZH_GPUImageDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9LCV5Z527;
 				INFOPLIST_FILE = SZH_GPUImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "BibaoBaseUsing.SZH-GPUImageDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bizhibn.cgqbiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
