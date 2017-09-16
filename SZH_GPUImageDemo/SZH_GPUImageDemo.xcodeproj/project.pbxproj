@@ -16,6 +16,7 @@
 		A6689D121F6A567C0024BFBE /* SZH_GPUImageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689D111F6A567C0024BFBE /* SZH_GPUImageDemoTests.m */; };
 		A6689D1D1F6A567C0024BFBE /* SZH_GPUImageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6689D1C1F6A567C0024BFBE /* SZH_GPUImageDemoUITests.m */; };
 		A6691AFF1F6CB8DC00992419 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6691AFE1F6CB8DC00992419 /* x.png */; };
+		A6691B031F6CF92D00992419 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6691B021F6CF92D00992419 /* GPUImageBeautifyFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		A6689D1C1F6A567C0024BFBE /* SZH_GPUImageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZH_GPUImageDemoUITests.m; sourceTree = "<group>"; };
 		A6689D1E1F6A567C0024BFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6691AFE1F6CB8DC00992419 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		A6691B011F6CF92D00992419 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		A6691B021F6CF92D00992419 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 		A6689CF61F6A567C0024BFBE /* SZH_GPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A6691B001F6CF8F800992419 /* GPUImageBeautifyFilter */,
 				A6691AFD1F6CB8DC00992419 /* Images */,
 				A6689CFA1F6A567C0024BFBE /* AppDelegate.h */,
 				A6689CFB1F6A567C0024BFBE /* AppDelegate.m */,
@@ -170,6 +174,15 @@
 				A6691AFE1F6CB8DC00992419 /* x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A6691B001F6CF8F800992419 /* GPUImageBeautifyFilter */ = {
+			isa = PBXGroup;
+			children = (
+				A6691B011F6CF92D00992419 /* GPUImageBeautifyFilter.h */,
+				A6691B021F6CF92D00992419 /* GPUImageBeautifyFilter.m */,
+			);
+			path = GPUImageBeautifyFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6689CFF1F6A567C0024BFBE /* ViewController.m in Sources */,
+				A6691B031F6CF92D00992419 /* GPUImageBeautifyFilter.m in Sources */,
 				A6689CFC1F6A567C0024BFBE /* AppDelegate.m in Sources */,
 				A6689CF91F6A567C0024BFBE /* main.m in Sources */,
 			);

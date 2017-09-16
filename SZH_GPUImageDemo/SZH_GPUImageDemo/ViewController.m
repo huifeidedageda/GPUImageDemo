@@ -6,16 +6,18 @@
 //  Copyright © 2017年 智衡宋. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <GPUImage.h>
-#import <Masonry.h>
 #define ScreenWidth   [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight  [UIScreen mainScreen].bounds.size.height
 
+#import "ViewController.h"
+#import <GPUImage.h>
+#import <Masonry.h>
+#import "GPUImageBeautifyFilter.h"
 
 @interface ViewController ()<GPUImageMovieDelegate,GPUImageMovieWriterDelegate>
 
 @property(nonatomic,strong) GPUImageVideoCamera       *videocamera;//摄像
+@property(nonatomic,strong) GPUImageView              *preview;//预览
 @property(nonatomic,strong) GPUImageStillCamera       *stillCamera;//拍照
 @property(nonatomic,strong) GPUImageMovie             *movie;
 @property(nonatomic,strong) GPUImageFilterGroup       *filterGroup;//滤镜组
@@ -127,10 +129,58 @@
 #pragma mark ----------------- GPUImage美颜滤镜
 
 - (void)szh_beautifyGPUImage {
+    UISwitch *switcher = [[UISwitch alloc] initWithFrame:CGRectMake(140, 80, 70, 30)];
+    [switcher addTarget:self action:@selector(changeBeautyFilter:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:switcher];
     
     
+    //  1.创建视频摄像头
+    _videocamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:AVCaptureDevicePositionFront];
+    //  2. 设置摄像头输出视频的方向
+    _videocamera.outputImageOrientation = UIInterfaceOrientationPortrait;
+    //  开启捕获声音
+    [_videocamera addAudioInputsAndOutputs];
+    
+    //镜像策略，这里这样设置是最自然的。跟系统相机默认一样。
+    _videocamera.horizontallyMirrorRearFacingCamera = NO;
+    _videocamera.horizontallyMirrorFrontFacingCamera = YES;
+    
+    
+    //  3. 创建用于展示视频的GPUImageView
+    GPUImageView *captureVideoPreview = [[GPUImageView alloc] initWithFrame:self.view.bounds];
+    [self.view insertSubview:captureVideoPreview atIndex:0];
+    _preview = captureVideoPreview;
+    
+    //  4. 设置处理链
+    [_videocamera addTarget:_preview];
+    
+    
+    //  5.调用startCameraCapture采集视频,底层会把采集到的视频源，渲染到GPUImageView上，接着界面显示
+    [_videocamera startCameraCapture];
     
 }
+
+- (void)changeBeautyFilter:(UISwitch *)sender
+{
+    if (sender.on) {
+        
+        // 移除之前所有的处理链
+        [_videocamera removeAllTargets];
+        
+        // 创建美颜滤镜
+        GPUImageBeautifyFilter *beautifyFilter = [[GPUImageBeautifyFilter alloc] init];
+        // 设置GPUImage处理链，从数据->滤镜->界面展示
+        [_videocamera addTarget:beautifyFilter];
+        [beautifyFilter addTarget:_preview];
+        
+    } else {
+        
+        // 移除之前所有的处理链
+        [_videocamera removeAllTargets];
+        [_videocamera addTarget:_preview];
+    }
+}
+
 
 #pragma mark -----------------  滤镜测试
 
